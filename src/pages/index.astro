@@ -1,8 +1,61 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header";
+
+import config from "@data/config.json";
 ---
 
 <Layout title="Savante Design">
-  <main></main>
+  <main class="flex flex-col gap-12 max-md:px-4">
+    <section
+      class="carousel carousel-center w-full h-[640px] max-md:h-96 space-x-4"
+    >
+      <div class="carousel-item">
+        <img
+          src="https://www.bespokeinteriordesign.co.nz/media/pages/home/474df17346-1679566119/web-20_ds41218.jpg"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://www.decorilla.com/online-decorating/wp-content/uploads/2022/11/Luxury-interior-design-home-designing-1-scaled.jpeg"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://www.bespokeinteriordesign.co.nz/media/pages/home/474df17346-1679566119/web-20_ds41218.jpg"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://www.bespokeinteriordesign.co.nz/media/pages/home/474df17346-1679566119/web-20_ds41218.jpg"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://www.decorilla.com/online-decorating/wp-content/uploads/2022/11/Luxury-interior-design-home-designing-1-scaled.jpeg"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://www.bespokeinteriordesign.co.nz/media/pages/home/474df17346-1679566119/web-20_ds41218.jpg"
+        />
+      </div>
+    </section>
+    <section>
+      <div
+        class="flex justify-around max-w-screen-xl mx-auto max-md:flex-col gap-12"
+      >
+        <div class="flex-1 flex justify-center items-center font-serif">
+          <h1 class="text-9xl inline-block py-16 max-md:py-0 max-md:text-6xl">
+            My <br />Story.
+          </h1>
+        </div>
+        <div class="flex flex-col gap-6 flex-1 justify-end">
+          <h2 class="font-extralight">
+            {config.story}
+          </h2>
+          <a href="https://instagram.com" class="link">View All Projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

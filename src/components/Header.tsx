@@ -18,8 +18,12 @@ const Header = () => {
 
   useGSAP(() => {
     mobileNavTimelineRef.current
+      .set("body", {
+        height: "100vh",
+        overflow: "hidden",
+      })
       .to(mobileNavRef.current, {
-        position: "absolute",
+        position: "fixed",
         display: "flex",
         height: "100%",
         duration: 0.3,
