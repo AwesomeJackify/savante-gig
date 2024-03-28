@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import config from "@data/config.json";
+---
+
+<Layout title="Services">
+  <section class="flex flex-col gap-16 mx-auto px-4">
+    <h1
+      class="text-center text-2xl font-extralight max-w-screen-md mx-auto leading-normal"
+    >
+      Specialising in residential and boutique commercial work Savante Design
+      can help with the following projects
+    </h1>
+    <div class="flex flex-col gap-6 mx-12 max-md:mx-0">
+      {
+        config.services.map((service) => {
+          return (
+            <div>
+              <h2 class="text-4xl font-light">{service}</h2>
+            </div>
+          );
+        })
+      }
+    </div>
+  </section>
+  <section>
+    <div class="text-center bg-secondary text-indigo-950 py-4">
+      <h1 class="max-w-screen-md mx-auto leading-loose">
+        Savante Design sources and provides: furniture - indoor and outdoor;
+        fabrics - upholstery, outdoor and curtaining; window treatments -
+        shutters, custom made curtains and blinds; flooring - carpet, tiles and
+        premium wood flooring; kitchen and bathroomwares; bedlinen and
+        accessories from New Zealands' leading brands and suppliers.
+      </h1>
+    </div>
+  </section>
+</Layout>

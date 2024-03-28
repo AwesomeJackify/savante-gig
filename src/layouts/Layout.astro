@@ -20,7 +20,9 @@ import Header from "../components/Header";
   </head>
   <body>
     <Header client:load />
-    <slot />
+    <main class="flex flex-col gap-12">
+      <slot />
+    </main>
   </body>
 </html>
 <style is:global>
