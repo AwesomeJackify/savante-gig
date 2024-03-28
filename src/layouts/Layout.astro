@@ -5,7 +5,8 @@ interface Props {
 
 const { title } = Astro.props;
 
-import Header from "../components/Header";
+import Header from "@components/Header";
+import Footer from "@components/Footer.astro";
 ---
 
 <!doctype html>
@@ -23,6 +24,7 @@ import Header from "../components/Header";
     <main class="flex flex-col gap-12">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
 <style is:global>

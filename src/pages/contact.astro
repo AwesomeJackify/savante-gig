@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import config from "@data/config.json";
+---
+
+<Layout title="Contact">
+  <section class="md:h-screen flex max-md:flex-col max-md:gap-16">
+    <div class="flex-1">
+      <img
+        src="https://www.decorilla.com/online-decorating/wp-content/uploads/2020/06/modern-interior-design-living-room-by-decorilla-designer-mladen-c.jpeg"
+        alt="contact us image"
+        class="object-cover h-full w-full"
+      />
+    </div>
+    <div class="flex-1 self-center">
+      <div class="max-w-md mx-auto flex flex-col gap-6 max-md:px-4">
+        <h1 class="text-6xl text-center font-bold">Contact Me</h1>
+        <form action="#">
+          <label for="fname">First name</label>
+          <input type="text" class="form-input px-4 py-3 w-full rounded" />
+          <label for="lname">Last name</label>
+          <input type="text" class="form-input px-4 py-3 w-full rounded" />
+          <label for="email">Email</label>
+          <input type="email" class="form-input px-4 py-3 w-full rounded" />
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            class="form-input px-4 py-3 rounded w-full"
+            cols="30"
+            rows="10"></textarea>
+          <div class="flex w-full justify-center my-6">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>

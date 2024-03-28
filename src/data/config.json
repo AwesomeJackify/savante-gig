@@ -18,5 +18,32 @@
     "Villa / bungalow / state house renovations",
     "Apartment / Townhouse fit outs",
     "Exterior and Interior paint finishes and colour schemes"
+  ],
+  "socials": [
+    {
+      "name": "email",
+      "icon": "mdi:email",
+      "url": "mailto:info@savantedesign.co.nz"
+    },
+    {
+      "name": "phone",
+      "icon": "mdi:phone",
+      "url": "tel:+640212604864"
+    },
+    {
+      "name": "instagram",
+      "icon": "mdi:instagram",
+      "url": "https://www.instagram.com/"
+    },
+    {
+      "name": "facebook",
+      "icon": "mdi:facebook",
+      "url": "https://www.facebook.com/"
+    },
+    {
+      "name": "linkedin",
+      "icon": "mdi:linkedin",
+      "url": "https://www.linkedin.com/"
+    }
   ]
 }
