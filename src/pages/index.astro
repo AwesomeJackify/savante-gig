@@ -2,6 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 
 import config from "@data/config.json";
+import { Image } from "astro:assets";
+
+import work1Img from "@assets/images/work/1.jpeg";
+import work3Img from "@assets/images/work/3.jpeg";
+import work4Img from "@assets/images/work/4.jpeg";
+import work5Img from "@assets/images/work/5.jpeg";
+import work6Img from "@assets/images/work/6.jpeg";
+import work7Img from "@assets/images/work/7.jpeg";
+import work2Img from "@assets/images/work/2.jpeg";
 ---
 
 <Layout title="Savante Design">
@@ -9,33 +18,52 @@ import config from "@data/config.json";
     class="carousel carousel-center w-full h-[640px] max-md:h-96 space-x-4"
   >
     <div class="carousel-item">
-      <img
-        src="https://www.bespokeinteriordesign.co.nz/media/pages/home/474df17346-1679566119/web-20_ds41218.jpg"
+      <Image
+        src={work1Img}
+        alt="work image"
+        class="object-cover h-full w-full aspect-square"
       />
     </div>
     <div class="carousel-item">
-      <img
-        src="https://www.decorilla.com/online-decorating/wp-content/uploads/2022/11/Luxury-interior-design-home-designing-1-scaled.jpeg"
+      <Image
+        src={work2Img}
+        alt="work image"
+        class="object-cover h-full w-full aspect-square"
       />
     </div>
     <div class="carousel-item">
-      <img
-        src="https://www.bespokeinteriordesign.co.nz/media/pages/home/474df17346-1679566119/web-20_ds41218.jpg"
+      <Image
+        src={work3Img}
+        alt="work image"
+        class="object-cover h-full w-full aspect-square"
       />
     </div>
     <div class="carousel-item">
-      <img
-        src="https://www.bespokeinteriordesign.co.nz/media/pages/home/474df17346-1679566119/web-20_ds41218.jpg"
+      <Image
+        src={work4Img}
+        alt="work image"
+        class="object-cover h-full w-full aspect-square"
       />
     </div>
     <div class="carousel-item">
-      <img
-        src="https://www.decorilla.com/online-decorating/wp-content/uploads/2022/11/Luxury-interior-design-home-designing-1-scaled.jpeg"
+      <Image
+        src={work5Img}
+        alt="work image"
+        class="object-cover h-full w-full aspect-square"
       />
     </div>
     <div class="carousel-item">
-      <img
-        src="https://www.bespokeinteriordesign.co.nz/media/pages/home/474df17346-1679566119/web-20_ds41218.jpg"
+      <Image
+        src={work6Img}
+        alt="work image"
+        class="object-cover h-full w-full aspect-square"
+      />
+    </div>
+    <div class="carousel-item">
+      <Image
+        src={work7Img}
+        alt="work image"
+        class="object-cover h-full w-full aspect-square"
       />
     </div>
   </section>

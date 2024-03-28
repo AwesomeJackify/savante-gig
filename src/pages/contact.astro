@@ -1,14 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import work4Img from "@assets/images/work/4.jpeg";
+import { Image } from "astro:assets";
+
 import config from "@data/config.json";
 ---
 
 <Layout title="Contact">
   <section class="md:h-screen flex max-md:flex-col max-md:gap-16">
     <div class="flex-1">
-      <img
-        src="https://www.decorilla.com/online-decorating/wp-content/uploads/2020/06/modern-interior-design-living-room-by-decorilla-designer-mladen-c.jpeg"
+      <Image
+        src={work4Img}
         alt="contact us image"
         class="object-cover h-full w-full"
       />
