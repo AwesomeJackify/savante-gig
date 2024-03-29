@@ -18,10 +18,6 @@ const Header = () => {
 
   useGSAP(() => {
     mobileNavTimelineRef.current
-      .set("body", {
-        height: "100vh",
-        overflow: "hidden",
-      })
       .to(mobileNavRef.current, {
         position: "fixed",
         display: "flex",
@@ -49,7 +45,7 @@ const Header = () => {
   };
 
   return (
-    <nav>
+    <nav className="fixed z-50 w-full top-0 left-0 bg-secondary">
       <div
         ref={mobileNavRef}
         className="from-secondary to-primary left-0 top-0 hidden h-0 w-full flex-col items-center justify-center gap-16 overflow-hidden bg-gradient-to-br"
@@ -64,7 +60,7 @@ const Header = () => {
           </a>
         ))}
       </div>
-      <div className="flex items-end justify-evenly p-4 py-12">
+      <div className="flex items-center justify-evenly p-4 py-2">
         <div className="invisible flex-1">hi</div>
         <div className="flex flex-grow justify-center">
           <a

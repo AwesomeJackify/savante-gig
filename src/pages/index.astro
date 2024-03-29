@@ -3,6 +3,9 @@ import Layout from "../layouts/Layout.astro";
 
 import config from "@data/config.json";
 import { Image } from "astro:assets";
+import { gsap } from "gsap";
+
+import heroImg from "@assets/images/hero.jpg";
 
 import work1Img from "@assets/images/work/1.jpeg";
 import work3Img from "@assets/images/work/3.jpeg";
@@ -14,6 +17,32 @@ import work2Img from "@assets/images/work/2.jpeg";
 ---
 
 <Layout title="Savante Design">
+  <section class="h-[800px] max-md:h-96 overflow-hidden relative">
+    <div
+      class="absolute flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 gap-4"
+    >
+      <h1
+        class="text-8xl font-bold text-primary text-center hero-text max-md:text-5xl"
+      >
+        {config.businessName}
+      </h1>
+      <h2
+        class="text-4xl font-light text-right max-md:text-2xl text-primary hero-text"
+      >
+        Interior Design
+      </h2>
+    </div>
+    <div
+      class="black-filter absolute top-0 left-0 w-full h-full bg-black z-20 opacity-50"
+    >
+    </div>
+    <Image
+      id="heroImg"
+      src={heroImg}
+      alt="hero image"
+      class="h-[1300px] max-md:h-[700px] w-full object-cover absolute"
+    />
+  </section>
   <section
     class="carousel carousel-center w-full h-[640px] max-md:h-96 space-x-4"
   >
@@ -87,3 +116,42 @@ import work2Img from "@assets/images/work/2.jpeg";
     </div>
   </section>
 </Layout>
+
+<script>
+  import gsap from "gsap";
+
+  const heroTimeline = gsap.timeline();
+
+  heroTimeline
+    .to("#heroImg", {
+      bottom: "0",
+      delay: 0.4,
+      duration: 2,
+      ease: "power2.out",
+    })
+    .from(
+      ".hero-text",
+      {
+        opacity: 0,
+        duration: 2,
+        stagger: 0.5,
+      },
+      "<1"
+    )
+    .from(
+      "nav",
+      {
+        opacity: 0,
+        duration: 1,
+      },
+      "<1"
+    )
+    .from(
+      ".black-filter",
+      {
+        opacity: 0,
+        duration: 1,
+      },
+      "<"
+    );
+</script>
