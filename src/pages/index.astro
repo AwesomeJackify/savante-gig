@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 
 import config from "@data/config.json";
 import { Image } from "astro:assets";
-import { gsap } from "gsap";
+import { Icon } from "astro-icon/components";
 
 import heroImg from "@assets/images/hero.jpg";
 
@@ -43,57 +43,66 @@ import work2Img from "@assets/images/work/2.jpeg";
       class="h-[1300px] max-md:h-[700px] w-full object-cover absolute"
     />
   </section>
-  <section
-    class="carousel carousel-center w-full h-[640px] max-md:h-96 space-x-4"
-  >
-    <div class="carousel-item">
-      <Image
-        src={work1Img}
-        alt="work image"
-        class="object-cover h-full w-full aspect-square"
-      />
+  <section>
+    <div
+      class="carousel carousel-center w-full h-[640px] max-md:h-96 space-x-4"
+    >
+      <div class="carousel-item">
+        <Image
+          src={work1Img}
+          alt="work image"
+          class="object-cover h-full w-full aspect-square"
+        />
+      </div>
+      <div class="carousel-item">
+        <Image
+          src={work2Img}
+          alt="work image"
+          class="object-cover h-full w-full aspect-square"
+        />
+      </div>
+      <div class="carousel-item">
+        <Image
+          src={work3Img}
+          alt="work image"
+          class="object-cover h-full w-full aspect-square"
+        />
+      </div>
+      <div class="carousel-item">
+        <Image
+          src={work4Img}
+          alt="work image"
+          class="object-cover h-full w-full aspect-square"
+        />
+      </div>
+      <div class="carousel-item">
+        <Image
+          src={work5Img}
+          alt="work image"
+          class="object-cover h-full w-full aspect-square"
+        />
+      </div>
+      <div class="carousel-item">
+        <Image
+          src={work6Img}
+          alt="work image"
+          class="object-cover h-full w-full aspect-square"
+        />
+      </div>
+      <div class="carousel-item">
+        <Image
+          src={work7Img}
+          alt="work image"
+          class="object-cover h-full w-full aspect-square"
+        />
+      </div>
     </div>
-    <div class="carousel-item">
-      <Image
-        src={work2Img}
-        alt="work image"
-        class="object-cover h-full w-full aspect-square"
-      />
-    </div>
-    <div class="carousel-item">
-      <Image
-        src={work3Img}
-        alt="work image"
-        class="object-cover h-full w-full aspect-square"
-      />
-    </div>
-    <div class="carousel-item">
-      <Image
-        src={work4Img}
-        alt="work image"
-        class="object-cover h-full w-full aspect-square"
-      />
-    </div>
-    <div class="carousel-item">
-      <Image
-        src={work5Img}
-        alt="work image"
-        class="object-cover h-full w-full aspect-square"
-      />
-    </div>
-    <div class="carousel-item">
-      <Image
-        src={work6Img}
-        alt="work image"
-        class="object-cover h-full w-full aspect-square"
-      />
-    </div>
-    <div class="carousel-item">
-      <Image
-        src={work7Img}
-        alt="work image"
-        class="object-cover h-full w-full aspect-square"
-      />
+    <div
+      class="max-md:hidden flex gap-2 items-center w-full justify-center opacity-75"
+    >
+      <h1 class="italic">scroll using</h1>
+      <kbd class="kbd kbd-xs">Shift</kbd> +
+      <Icon name="mdi:mouse-scroll-wheel" />
     </div>
   </section>
   <section class="max-md:px-4">
