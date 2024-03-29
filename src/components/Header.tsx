@@ -48,7 +48,7 @@ const Header = () => {
     <nav className="fixed z-50 w-full top-0 left-0 bg-secondary">
       <div
         ref={mobileNavRef}
-        className="from-secondary to-primary left-0 top-0 hidden h-0 w-full flex-col items-center justify-center gap-16 overflow-hidden bg-gradient-to-br"
+        className="from-secondary to-base-300 left-0 top-0 hidden h-0 w-full flex-col items-center justify-center gap-16 overflow-hidden bg-gradient-to-br"
       >
         {config.pages.map((page) => (
           <a

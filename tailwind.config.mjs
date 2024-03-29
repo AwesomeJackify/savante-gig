@@ -5,7 +5,14 @@ export default {
     extend: {},
   },
   daisyui: {
-    themes: ["cupcake"],
+    themes: [
+      {
+        luxury: {
+          ...require("daisyui/src/theming/themes")["luxury"],
+          secondary: "#011d04",
+        },
+      },
+    ],
   },
   plugins: [require("daisyui")],
 };
