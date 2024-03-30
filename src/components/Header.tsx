@@ -66,7 +66,7 @@ const Header = () => {
           <a
             ref={logoRef}
             href="/"
-            className="z-50 text-center text-4xl font-bold max-md:text-2xl"
+            className="z-50 text-center text-2xl font-bold"
           >
             {config.businessName}
           </a>
@@ -75,12 +75,12 @@ const Header = () => {
         <div className="flex flex-1 justify-end">
           {!showNav ? (
             <CgMenuMotion
-              className="relative z-50 cursor-pointer self-end text-6xl transition max-md:text-4xl"
+              className="relative z-50 cursor-pointer self-end text-4xl transition"
               onClick={() => toggleNav()}
             />
           ) : (
             <CgClose
-              className="relative z-50 cursor-pointer text-6xl text-black transition max-md:text-4xl"
+              className="relative z-50 cursor-pointer text-4xl transition"
               onClick={() => toggleNav()}
             />
           )}
