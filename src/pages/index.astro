@@ -165,8 +165,8 @@ import work2Img from "@assets/images/work/2.jpeg";
 
   const splitTypes = document.querySelectorAll(".hero-text");
 
-  splitTypes.forEach((paragraph) => {
-    const text = new SplitType(paragraph, { types: "chars" });
+  splitTypes.forEach((paragraph, i) => {
+    const text = new SplitType(paragraph as HTMLElement, { types: "chars" });
 
     gsap.to(text.chars, {
       color: "#e0aa2b",
