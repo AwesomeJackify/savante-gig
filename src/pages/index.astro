@@ -17,14 +17,14 @@ import work2Img from "@assets/images/work/2.jpeg";
 ---
 
 <Layout title="Savante Design">
-  <section class="h-[800px] max-md:h-96 overflow-hidden relative">
+  <section class="h-[800px] overflow-hidden relative">
     <div
       class="absolute flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 gap-4"
     >
-      <h1 class="text-8xl font-bold text-primary text-center hero-text">
+      <h1 class="text-7xl font-bold text-primary text-center hero-text">
         {config.businessName}
       </h1>
-      <h2 class="text-4xl font-light text-right text-primary hero-text">
+      <h2 class="text-2xl font-light text-right text-primary hero-text">
         Interior Design
       </h2>
     </div>
@@ -36,7 +36,7 @@ import work2Img from "@assets/images/work/2.jpeg";
       id="heroImg"
       src={heroImg}
       alt="hero image"
-      class="h-[1300px] max-md:h-[700px] w-full object-cover absolute bg-green-500"
+      class="h-[1300px] w-full object-cover absolute bg-green-500"
     />
   </section>
   <section>
@@ -99,6 +99,11 @@ import work2Img from "@assets/images/work/2.jpeg";
       <h1 class="italic">scroll using</h1>
       <kbd class="kbd kbd-xs">Shift</kbd> +
       <Icon name="mdi:mouse-scroll-wheel" />
+    </div>
+    <div
+      class="md:hidden flex gap-2 items-center w-full justify-center opacity-75"
+    >
+      <h1 class="italic">scroll right to see more</h1>
     </div>
   </section>
   <section class="max-md:px-4">
