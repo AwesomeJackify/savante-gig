@@ -10,7 +10,7 @@ const Sponsors = () => {
 
     return (
         <div className="flex flex-col">
-            <Marquee autoFill={true}>
+            <Marquee autoFill={true} speed={40}>
                 {
                     images.map(img => {
 
