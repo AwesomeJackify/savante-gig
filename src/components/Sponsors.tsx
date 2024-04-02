@@ -19,7 +19,7 @@ const Sponsors = () => {
                                 key={img.src}
                                 src={`${img.src}`}
                                 alt="sponsor"
-                                className="w-52 max-md:w-20"
+                                className="w-32 max-md:w-12 mx-4"
                             />
                         );
 
