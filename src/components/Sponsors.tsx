@@ -11,19 +11,17 @@ const Sponsors = () => {
             <Marquee autoFill={true}>
                 {
                     sponsorImages.map(img => {
-                        const { loading, error, image } = useImage(`../assets/images/sponsors/${img}`)
+                        const { loading, error, image } = useImage(`../assets/images/sponsors/${img}`);
                         if (image) {
                             return (
                                 <img
                                     key={img}
-                                    src={`${image.src}`}
+                                    src={`${(image as any).src}`}
                                     alt="sponsor"
                                     className="w-52 max-md:w-20"
                                 />
-                            )
+                            );
                         }
-
-
                     })
                 }
             </Marquee>

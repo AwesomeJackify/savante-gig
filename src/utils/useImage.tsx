@@ -12,7 +12,7 @@ const useImage = (filePath: string) => {
                 const response = await import(filePath) // change relative path to suit your needs
                 setImage(response.default)
             } catch (err) {
-                setError(err)
+                setError(err as unknown as null) // Explicitly type the setError state setter function as unknown and cast err to null
             } finally {
                 setLoading(false)
             }
