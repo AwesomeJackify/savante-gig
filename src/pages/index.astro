@@ -23,15 +23,19 @@ import Sponsors from "@components/Sponsors";
     <div
       class="absolute flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 gap-4"
     >
-      <h1 class="text-7xl font-bold text-primary text-center hero-text">
+      <h1
+        class="text-7xl font-bold text-primary text-center opacity-0 hero-text"
+      >
         {config.businessName}
       </h1>
-      <h2 class="text-3xl font-light text-right text-primary hero-text">
+      <h2
+        class="text-3xl font-light text-right text-primary opacity-0 hero-text"
+      >
         Interior Design
       </h2>
     </div>
     <div
-      class="black-filter absolute top-0 left-0 w-full h-full bg-black z-20 opacity-50"
+      class="black-filter opacity-0 absolute top-0 left-0 w-full h-full bg-black z-20"
     >
     </div>
     <Image
@@ -147,27 +151,27 @@ import Sponsors from "@components/Sponsors";
       duration: 2,
       ease: "power2.out",
     })
-    .from(
+    .to(
       ".hero-text",
       {
-        opacity: 0,
+        opacity: 1,
         duration: 2,
         stagger: 0.5,
       },
       "<1"
     )
-    .from(
+    .to(
       "nav",
       {
-        opacity: 0,
+        opacity: 1,
         duration: 1,
       },
       "<1"
     )
-    .from(
+    .to(
       ".black-filter",
       {
-        opacity: 0,
+        opacity: 0.5,
         duration: 1,
       },
       "<"

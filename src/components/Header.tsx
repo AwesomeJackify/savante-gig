@@ -45,7 +45,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="bg-secondary relative left-0 top-0 z-50 w-full">
+    <nav className="bg-secondary relative left-0 top-0 z-50 w-full opacity-0">
       <div
         ref={mobileNavRef}
         className="from-secondary to-base-300 left-0 top-0 hidden h-0 w-full flex-col items-center justify-center gap-16 overflow-hidden bg-gradient-to-br"
