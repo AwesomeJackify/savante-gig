@@ -14,17 +14,19 @@ import work5Img from "@assets/images/work/5.jpeg";
 import work6Img from "@assets/images/work/6.jpeg";
 import work7Img from "@assets/images/work/7.jpeg";
 import work2Img from "@assets/images/work/2.jpeg";
+
+import Sponsors from "@components/Sponsors";
 ---
 
 <Layout title="Savante Design">
-  <section class="h-[800px] max-md:h-96 overflow-hidden relative">
+  <section class="h-[900px] max-md:h-[500px] overflow-hidden relative">
     <div
       class="absolute flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 gap-4"
     >
       <h1 class="text-8xl font-bold text-primary text-center hero-text">
         {config.businessName}
       </h1>
-      <h2 class="text-4xl font-light text-right text-primary hero-text">
+      <h2 class="text-3xl font-light text-right text-primary hero-text">
         Interior Design
       </h2>
     </div>
@@ -36,8 +38,11 @@ import work2Img from "@assets/images/work/2.jpeg";
       id="heroImg"
       src={heroImg}
       alt="hero image"
-      class="h-[1300px] max-md:h-[700px] w-full object-cover absolute bg-green-500"
+      class="h-[1300px] max-md:h-[900px] w-full object-cover absolute bg-green-500"
     />
+  </section>
+  <section class="bg-white py-8">
+    <Sponsors client:only="react" />
   </section>
   <section>
     <div
@@ -165,21 +170,21 @@ import work2Img from "@assets/images/work/2.jpeg";
 
   const splitTypes = document.querySelectorAll(".hero-text");
 
-  splitTypes.forEach((paragraph, i) => {
-    const text = new SplitType(paragraph, { types: "chars" });
+  // splitTypes.forEach((paragraph, i) => {
+  //   const text = new SplitType(paragraph as HTMLElement, { types: "chars" });
 
-    gsap.to(text.chars, {
-      color: "#e0aa2b",
-      duration: 0.5,
-      stagger: 0.02,
-      scrollTrigger: {
-        trigger: "#heroImg",
-        start: "top top",
-        end: "70% center",
-        scrub: true,
-        toggleActions: "play play reverse reverse",
-        markers: false,
-      },
-    });
-  });
+  //   gsap.to(text.chars, {
+  //     color: "#e0aa2b",
+  //     duration: 0.5,
+  //     stagger: 0.02,
+  //     scrollTrigger: {
+  //       trigger: "#heroImg",
+  //       start: "top top",
+  //       end: "70% center",
+  //       scrub: true,
+  //       toggleActions: "play play reverse reverse",
+  //       markers: false,
+  //     },
+  //   });
+  // });
 </script>
