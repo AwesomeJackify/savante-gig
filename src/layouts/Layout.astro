@@ -20,7 +20,7 @@ import Footer from "@components/Footer.astro";
     <title>{title}</title>
   </head>
   <body>
-    <Header client:load />
+    <Header isHome={Astro.url.pathname == "/" ? true : false} client:load />
     <main class="flex flex-col">
       <slot />
     </main>

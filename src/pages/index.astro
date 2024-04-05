@@ -14,6 +14,22 @@ import work5Img from "@assets/images/work/5.jpeg";
 import work6Img from "@assets/images/work/6.jpeg";
 import work7Img from "@assets/images/work/7.jpeg";
 import work2Img from "@assets/images/work/2.jpeg";
+import work8Img from "@assets/images/work/8.jpeg";
+import work9Img from "@assets/images/work/9.jpeg";
+import work10Img from "@assets/images/work/10.jpeg";
+
+const workImages = [
+  work1Img,
+  work2Img,
+  work3Img,
+  work4Img,
+  work5Img,
+  work6Img,
+  work7Img,
+  work8Img,
+  work9Img,
+  work10Img,
+];
 
 import Sponsors from "@components/Sponsors";
 ---
@@ -52,55 +68,17 @@ import Sponsors from "@components/Sponsors";
     <div
       class="carousel carousel-center w-full h-[640px] max-md:h-96 space-x-4"
     >
-      <div class="carousel-item">
-        <Image
-          src={work1Img}
-          alt="work image"
-          class="object-cover h-full w-full aspect-square"
-        />
-      </div>
-      <div class="carousel-item">
-        <Image
-          src={work2Img}
-          alt="work image"
-          class="object-cover h-full w-full aspect-square"
-        />
-      </div>
-      <div class="carousel-item">
-        <Image
-          src={work3Img}
-          alt="work image"
-          class="object-cover h-full w-full aspect-square"
-        />
-      </div>
-      <div class="carousel-item">
-        <Image
-          src={work4Img}
-          alt="work image"
-          class="object-cover h-full w-full aspect-square"
-        />
-      </div>
-      <div class="carousel-item">
-        <Image
-          src={work5Img}
-          alt="work image"
-          class="object-cover h-full w-full aspect-square"
-        />
-      </div>
-      <div class="carousel-item">
-        <Image
-          src={work6Img}
-          alt="work image"
-          class="object-cover h-full w-full aspect-square"
-        />
-      </div>
-      <div class="carousel-item">
-        <Image
-          src={work7Img}
-          alt="work image"
-          class="object-cover h-full w-full aspect-square"
-        />
-      </div>
+      {
+        workImages.map((img, i) => (
+          <div class="carousel-item">
+            <Image
+              src={img}
+              alt="work image"
+              class="object-cover h-full w-full aspect-square"
+            />
+          </div>
+        ))
+      }
     </div>
     <div
       class="max-md:hidden flex gap-2 items-center w-full justify-center opacity-75"
@@ -160,10 +138,10 @@ import Sponsors from "@components/Sponsors";
       },
       "<1"
     )
-    .from(
+    .to(
       "nav",
       {
-        opacity: 0,
+        opacity: 1,
         duration: 1,
       },
       "<1"

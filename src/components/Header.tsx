@@ -8,7 +8,11 @@ import config from "@data/config.json";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const Header = () => {
+interface Props {
+  isHome: boolean;
+}
+
+const Header = ({ isHome }: Props) => {
   const [showNav, setShowNav] = useState(false);
 
   const mobileNavTimelineRef = useRef(gsap.timeline({ paused: true }));
@@ -18,12 +22,16 @@ const Header = () => {
 
   useGSAP(() => {
     mobileNavTimelineRef.current
-      .to(mobileNavRef.current, {
-        position: "fixed",
-        display: "flex",
-        height: "100%",
-        duration: 0.3,
-      }, 0)
+      .to(
+        mobileNavRef.current,
+        {
+          position: "fixed",
+          display: "flex",
+          height: "100%",
+          duration: 0.3,
+        },
+        0,
+      )
       .to(".mobileNavItems", {
         opacity: 1,
         stagger: 0.1,
@@ -36,7 +44,6 @@ const Header = () => {
     } else {
       mobileNavTimelineRef.current.reverse();
     }
-
   }, [showNav]);
 
   const toggleNav = () => {
@@ -44,10 +51,12 @@ const Header = () => {
   };
 
   return (
-    <nav className="bg-secondary fixed left-0 top-0 z-50 w-full">
+    <nav
+      className={`fixed left-0 top-0 z-50 w-full bg-secondary ${isHome ? "opacity-0" : "opacity-100"}`}
+    >
       <div
         ref={mobileNavRef}
-        className="from-secondary to-base-300 left-0 top-0 hidden h-0 w-full flex-col items-center justify-center gap-16 overflow-hidden bg-gradient-to-br"
+        className="left-0 top-0 hidden h-0 w-full flex-col items-center justify-center gap-16 overflow-hidden bg-gradient-to-br from-secondary to-base-300"
       >
         {config.pages.map((page) => (
           <a
