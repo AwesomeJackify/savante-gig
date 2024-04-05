@@ -23,7 +23,7 @@ const Header = () => {
         display: "flex",
         height: "100%",
         duration: 0.3,
-      })
+      }, 0)
       .to(".mobileNavItems", {
         opacity: 1,
         stagger: 0.1,
@@ -31,13 +31,12 @@ const Header = () => {
   });
 
   useEffect(() => {
-    console.log("showNav", showNav);
-
     if (showNav) {
       mobileNavTimelineRef.current.play();
     } else {
       mobileNavTimelineRef.current.reverse();
     }
+
   }, [showNav]);
 
   const toggleNav = () => {
@@ -45,7 +44,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="bg-secondary relative left-0 top-0 z-50 w-full opacity-0">
+    <nav className="bg-secondary fixed left-0 top-0 z-50 w-full">
       <div
         ref={mobileNavRef}
         className="from-secondary to-base-300 left-0 top-0 hidden h-0 w-full flex-col items-center justify-center gap-16 overflow-hidden bg-gradient-to-br"
