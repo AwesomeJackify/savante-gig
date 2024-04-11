@@ -14,7 +14,7 @@ export default {
         // },
         luxury: {
           ...require("daisyui/src/theming/themes")["luxury"],
-          secondary: "navy",
+          secondary: "#000042",
         },
       },
     ],
