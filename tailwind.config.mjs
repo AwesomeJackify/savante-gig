@@ -7,15 +7,15 @@ export default {
   daisyui: {
     themes: [
       {
-        cupcake: {
-          ...require("daisyui/src/theming/themes")["cupcake"],
-          primary: "navy",
-          accent: "plum",
-        },
-        // luxury: {
-        //   ...require("daisyui/src/theming/themes")["luxury"],
-        //   secondary: "#011d04",
+        // cupcake: {
+        //   ...require("daisyui/src/theming/themes")["cupcake"],
+        //   primary: "navy",
+        //   accent: "plum",
         // },
+        luxury: {
+          ...require("daisyui/src/theming/themes")["luxury"],
+          secondary: "navy",
+        },
       },
     ],
   },

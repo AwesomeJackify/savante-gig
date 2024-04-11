@@ -74,13 +74,13 @@ const Header = ({ isHome }: Props) => {
           <a
             ref={logoRef}
             href="/"
-            className="z-50 text-center text-2xl font-bold text-primary"
+            className="z-50 text-center text-2xl font-bold text-gray-300"
           >
             {config.businessName}
           </a>
         </div>
 
-        <div className="flex flex-1 justify-end text-primary">
+        <div className="flex flex-1 justify-end text-gray-300">
           {!showNav ? (
             <CgMenuMotion
               className="relative z-50 cursor-pointer self-end text-4xl transition"
