@@ -123,13 +123,14 @@ import Sponsors from "@components/Sponsors";
       Specialising in residential and boutique commercial work Savante Design
       can help with the following projects:
     </h1>
-    <div
-      class="flex flex-row gap-6 max-md:mx-0 text-xl font-light text-center max-w-screen-xl mx-auto"
-    >
+    <div class="flex flex-col gap-6 mx-12 max-md:mx-0">
       {
-        config.services.map((service, index) => {
-          if (index === config.services.length - 1) return service;
-          return service + ", ";
+        config.services.map((service) => {
+          return (
+            <div>
+              <h2 class="text-4xl font-light">{service}</h2>
+            </div>
+          );
         })
       }
     </div>
@@ -137,10 +138,10 @@ import Sponsors from "@components/Sponsors";
   <section class="mt-12">
     <div class="text-center bg-secondary py-8 px-1">
       <h1 class="max-w-screen-md mx-auto text-xl leading-loose text-primary">
-        Savante Design sources and provides: furniture - indoor and outdoor;
-        fabrics - upholstery, outdoor and curtaining; window treatments -
-        shutters, custom made curtains and blinds; flooring - carpet, tiles and
-        premium wood flooring; kitchen and bathroomwares; bedlinen and
+        Savante Design sources and provides: furniture (indoor and outdoor),
+        fabrics (upholstery, outdoor and curtaining), window treatments (
+        shutters, custom made curtains and blinds), flooring (carpet, tiles and
+        premium wood flooring), kitchen and bathroomwares, bedlinen and
         accessories from New Zealands' leading brands and suppliers.
       </h1>
     </div>
