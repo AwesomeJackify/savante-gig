@@ -12,6 +12,7 @@ export default defineConfig({
     icon({
       include: {
         mdi: ["*"], // (Default) Loads entire Material Design Icon set
+        lucide: ["*"],
       },
     }),
   ],

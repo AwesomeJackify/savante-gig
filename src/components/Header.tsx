@@ -52,7 +52,7 @@ const Header = ({ isHome }: Props) => {
 
   return (
     <nav
-      className={`fixed left-0 top-0 z-50 w-full bg-secondary ${isHome ? "opacity-0" : "opacity-100"}`}
+      className={`fixed left-0 top-0 z-50 h-16 w-full bg-secondary ${isHome ? "opacity-0" : "opacity-100"}`}
     >
       <div
         ref={mobileNavRef}
@@ -68,7 +68,7 @@ const Header = ({ isHome }: Props) => {
           </a>
         ))}
       </div>
-      <div className="flex items-center justify-evenly p-4 py-2">
+      <div className="flex h-full items-center justify-evenly">
         <div className="invisible flex-1">hi</div>
         <div className="flex flex-grow justify-center">
           <a
