@@ -2,10 +2,6 @@
   "businessName": "Savante Design",
   "pages": [
     {
-      "name": "Services",
-      "url": "/services"
-    },
-    {
       "name": "Contact",
       "url": "/contact"
     }

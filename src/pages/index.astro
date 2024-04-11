@@ -17,18 +17,22 @@ import work2Img from "@assets/images/work/2.jpeg";
 import work8Img from "@assets/images/work/8.jpeg";
 import work9Img from "@assets/images/work/9.jpeg";
 import work10Img from "@assets/images/work/10.jpeg";
+import work11Img from "@assets/images/work/11.jpeg";
+import work12Img from "@assets/images/work/12.jpeg";
 
 const workImages = [
   work1Img,
   work2Img,
+  work9Img,
   work3Img,
+  work10Img,
+  work12Img,
   work4Img,
   work5Img,
-  work6Img,
+  work11Img,
   work7Img,
+  work6Img,
   work8Img,
-  work9Img,
-  work10Img,
 ];
 
 import Sponsors from "@components/Sponsors";
@@ -39,11 +43,11 @@ import Sponsors from "@components/Sponsors";
     <div
       class="absolute flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 gap-4"
     >
-      <h1
+      <div
         class="text-7xl font-bold text-primary text-center opacity-0 hero-text"
       >
         {config.businessName}
-      </h1>
+      </div>
       <h2
         class="text-3xl font-light text-right text-primary opacity-0 hero-text"
       >
@@ -51,7 +55,7 @@ import Sponsors from "@components/Sponsors";
       </h2>
     </div>
     <div
-      class="black-filter opacity-0 absolute top-0 left-0 w-full h-full bg-black z-20"
+      class="black-filter opacity-0 absolute top-0 left-0 w-full h-full bg-gray-200 z-20"
     >
     </div>
     <Image
@@ -113,6 +117,36 @@ import Sponsors from "@components/Sponsors";
       </div>
     </div>
   </section>
+  <section class="flex flex-col gap-16 mx-auto px-4 mt-20">
+    <h1
+      class="text-center text-2xl font-extralight max-w-screen-md mx-auto leading-normal py-6"
+    >
+      Specialising in residential and boutique commercial work Savante Design
+      can help with the following projects
+    </h1>
+    <div class="flex flex-col gap-6 mx-12 max-md:mx-0">
+      {
+        config.services.map((service) => {
+          return (
+            <div>
+              <h2 class="text-4xl font-light">{service}</h2>
+            </div>
+          );
+        })
+      }
+    </div>
+  </section>
+  <section class="mt-12">
+    <div class="text-center bg-secondary py-4">
+      <h1 class="max-w-screen-md mx-auto leading-loose text-primary">
+        Savante Design sources and provides: furniture - indoor and outdoor;
+        fabrics - upholstery, outdoor and curtaining; window treatments -
+        shutters, custom made curtains and blinds; flooring - carpet, tiles and
+        premium wood flooring; kitchen and bathroomwares; bedlinen and
+        accessories from New Zealands' leading brands and suppliers.
+      </h1>
+    </div>
+  </section>
 </Layout>
 
 <script>
@@ -154,7 +188,7 @@ import Sponsors from "@components/Sponsors";
     .to(
       ".black-filter",
       {
-        opacity: 0.5,
+        opacity: 0.3,
         duration: 1,
       },
       "<"

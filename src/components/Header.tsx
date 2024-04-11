@@ -62,7 +62,7 @@ const Header = ({ isHome }: Props) => {
           <a
             key={page.name}
             href={page.url}
-            className="mobileNavItems text-center font-serif text-6xl font-extralight opacity-0 hover:italic"
+            className="mobileNavItems text-center font-serif text-6xl font-extralight opacity-0 transition-colors hover:text-primary"
           >
             {page.name}
           </a>
@@ -74,13 +74,13 @@ const Header = ({ isHome }: Props) => {
           <a
             ref={logoRef}
             href="/"
-            className="z-50 text-center text-2xl font-bold"
+            className="z-50 text-center text-2xl font-bold text-primary"
           >
             {config.businessName}
           </a>
         </div>
 
-        <div className="flex flex-1 justify-end">
+        <div className="flex flex-1 justify-end text-primary">
           {!showNav ? (
             <CgMenuMotion
               className="relative z-50 cursor-pointer self-end text-4xl transition"
