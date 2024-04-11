@@ -62,15 +62,15 @@ const Header = ({ isHome }: Props) => {
           <a
             key={page.name}
             href={page.url}
-            className="mobileNavItems text-center font-serif text-6xl font-extralight opacity-0 transition-colors hover:text-primary"
+            className="mobileNavItems text-center text-6xl font-extralight opacity-0 transition-colors hover:text-primary"
           >
             {page.name}
           </a>
         ))}
       </div>
       <div className="flex h-full items-center justify-evenly">
-        <div className="invisible flex-1">hi</div>
-        <div className="flex flex-grow justify-center">
+        <div className="invisible flex-1 max-md:hidden">hi</div>
+        <div className="flex flex-grow items-center justify-center max-md:ml-4 max-md:justify-start">
           <a
             ref={logoRef}
             href="/"
@@ -81,6 +81,15 @@ const Header = ({ isHome }: Props) => {
         </div>
 
         <div className="flex flex-1 justify-end text-gray-300">
+          <a
+            href="/contact"
+            className="pr-4 text-sm transition hover:text-accent"
+          >
+            Contact
+          </a>
+        </div>
+
+        {/* <div className="flex flex-1 justify-end text-gray-300">
           {!showNav ? (
             <CgMenuMotion
               className="relative z-50 cursor-pointer self-end text-4xl transition"
@@ -92,7 +101,7 @@ const Header = ({ isHome }: Props) => {
               onClick={() => toggleNav()}
             />
           )}
-        </div>
+        </div> */}
       </div>
     </nav>
   );
