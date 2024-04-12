@@ -3,6 +3,8 @@ import { CgClose } from "@react-icons/all-files/cg/CgClose";
 
 import { useEffect, useRef, useState } from "react";
 
+import logoImg from "@assets/images/logo.png";
+
 import config from "@data/config.json";
 
 import { gsap } from "gsap";
@@ -52,7 +54,7 @@ const Header = ({ isHome }: Props) => {
 
   return (
     <nav
-      className={`fixed left-0 top-0 z-50 h-16 w-full bg-secondary ${isHome ? "opacity-0" : "opacity-100"}`}
+      className={`absolute left-0 top-0 z-50 h-20 w-full ${isHome ? "opacity-0" : "opacity-100"}`}
     >
       <div
         ref={mobileNavRef}
@@ -69,21 +71,21 @@ const Header = ({ isHome }: Props) => {
         ))}
       </div>
       <div className="flex h-full items-center justify-evenly">
-        <div className="invisible flex-1 max-md:hidden">hi</div>
-        <div className="flex flex-grow items-center justify-center max-md:ml-4 max-md:justify-start">
+        {/* <div className="invisible flex-1 max-md:hidden">hi</div> */}
+        <div className="ml-8 flex flex-grow items-center justify-start max-md:ml-4 max-md:justify-start">
           <a
             ref={logoRef}
             href="/"
-            className="z-50 text-center text-2xl font-bold text-gray-300"
+            className="z-50 text-center text-2xl font-bold text-gray-300 transition hover:opacity-90"
           >
-            {config.businessName}
+            <img src={logoImg.src} alt="Logo" className="h-16" />
           </a>
         </div>
 
         <div className="flex flex-1 justify-end text-gray-300">
           <a
             href="/contact"
-            className="pr-4 text-sm transition hover:text-accent"
+            className="pr-4 text-sm text-primary transition hover:text-primary/80"
           >
             Contact
           </a>
