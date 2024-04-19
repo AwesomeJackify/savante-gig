@@ -72,7 +72,7 @@ const Header = ({ isHome }: Props) => {
       </div>
       <div className="flex h-full items-center justify-evenly">
         {/* <div className="invisible flex-1 max-md:hidden">hi</div> */}
-        <div className="ml-8 flex flex-grow items-center justify-start max-md:ml-4 max-md:justify-start">
+        {/* <div className="ml-8 flex flex-grow items-center justify-start max-md:ml-4 max-md:justify-start">
           <a
             ref={logoRef}
             href="/"
@@ -80,15 +80,21 @@ const Header = ({ isHome }: Props) => {
           >
             <img src={logoImg.src} alt="Logo" className="h-16" />
           </a>
-        </div>
+        </div> */}
 
         <div className="flex flex-1 justify-end text-gray-300">
-          <a
-            href="/contact"
-            className="pr-4 text-sm text-primary transition hover:text-primary/80"
-          >
-            Contact
-          </a>
+          {
+            config.pages.map(page => (
+              <a
+                key={page.name}
+                href={page.url}
+                className="pr-4 text-sm text-primary transition hover:text-primary/80"
+              >
+                {page.name}
+              </a>
+
+            ))
+          }
         </div>
 
         {/* <div className="flex flex-1 justify-end text-gray-300">
