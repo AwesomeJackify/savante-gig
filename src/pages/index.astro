@@ -63,7 +63,7 @@ import Sponsors from "@components/Sponsors";
       src={heroImg}
       loading={"eager"}
       alt="hero image"
-      class="scale-y-[2] absolute top-0 left-0 w-full h-full object-cover -z-10"
+      class="scale-y-[2] absolute top-0 left-0 w-full h-full object-cover -z-10 -translate-y-52"
     />
   </section>
   <!-- <section class="bg-gray-200 py-8 max-md:py-4">
@@ -159,16 +159,12 @@ import Sponsors from "@components/Sponsors";
   gsap.registerPlugin(ScrollTrigger);
 
   heroTimeline
-    .fromTo(
-      "#heroImg",
-      { translateY: "200px" },
-      {
-        translateY: "0",
-        delay: 0.4,
-        duration: 2,
-        ease: "power2.out",
-      }
-    )
+    .to("#heroImg", {
+      delay: 0.2,
+      translateY: "0",
+      duration: 2,
+      ease: "power2.out",
+    })
     .to(
       ".hero-text",
       {
